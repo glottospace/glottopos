@@ -94,17 +94,6 @@ glottoconstraint_length <- function(topomatch, minlength){
 }
 
 # Constraint 3: Geographic feature ----------------------------------------
-# glottoconstraint_geofeature <- function(topomatch, textmatch){
-#   topomatch <- topomatch[topomatch$topomatch == TRUE,]
-#   topocols <- names(topomatch)[names(topomatch) %nin% c("toponym", "geofeature", "geom", "toposcore", "topomatch")]
-#   geofeatures <- unlist(strsplit(textmatch$geofeature, ","))
-#   geofeatures <- geofeatures[geofeatures != "NA"]
-#   topomatch$topomatch <- topomatch$geofeature %in% geofeatures
-#   cat("Identified", sum(topomatch$topomatch), "topomatches. \n")
-#   return(topomatch)
-# }
-
-# Constraint 3: Geographic feature ----------------------------------------
 glottoconstraint_geofeature <- function(topomatch, textmatch){
   topomatch <- topomatch[topomatch$topomatch == TRUE,]
   topocols <- names(topomatch)[names(topomatch) %nin% c("toponym", "geofeature", "geom", "toposcore", "topomatch")]
