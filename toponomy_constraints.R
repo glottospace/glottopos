@@ -1,7 +1,7 @@
 # Overview ----------------------------------------------------------------
-# Integrating geographic and linguistic methods for the use of toponyms (place names) in language history: the case of Puquina
+# Integrating geographic and linguistic methods for the use of toponyms (place names) in language history
 # Authors: Sietze Norder and Nick Emlen
-# Functions for toponym analysis
+# Aim of this script: apply constraints
 
 library(sf)
 library(readxl)
