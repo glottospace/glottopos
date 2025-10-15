@@ -1,7 +1,7 @@
 
 # Overview ----------------------------------------------------------------
 # Script associated with the publication: Integrating Linguistic and Geographic Methods in Toponymic Analysis: The Case of Puquina (Central Andes), Diachronica
-# Authors: Sietze Norder and Nick Emlen
+# Authors: Sietze Norder and Nick Emlen 
 # Aim of this script: define functions for toponymic analysis
 
 # Required packages -------------------------------------------------------
