@@ -1,7 +1,7 @@
 # Overview ----------------------------------------------------------------
-# Integrating geographic and linguistic methods for the use of toponyms (place names) in language history
+# Script associated with the publication: Integrating Linguistic and Geographic Methods in Toponymic Analysis: The Case of Puquina (Central Andes), Diachronica
 # Authors: Sietze Norder and Nick Emlen
-# Aim of this script: apply constraints
+# Aim of this script: apply constraints for toponymic analysis
 
 library(sf)
 library(readxl)

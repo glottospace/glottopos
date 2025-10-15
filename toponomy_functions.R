@@ -1,8 +1,8 @@
 
 # Overview ----------------------------------------------------------------
-# Integrating geographic and linguistic methods for the use of toponyms (place names) in language history
+# Script associated with the publication: Integrating Linguistic and Geographic Methods in Toponymic Analysis: The Case of Puquina (Central Andes), Diachronica
 # Authors: Sietze Norder and Nick Emlen
-# Aim of this script: define functions for toponym analysis
+# Aim of this script: define functions for toponymic analysis
 
 # Required packages -------------------------------------------------------
 library(sf)
@@ -22,9 +22,9 @@ library(Matrix)
 # Data preparation --------------------------------------------------------
 # Convert geonames text files to sf objects
 geonamestxt2sf <- function(file) {
-  df <- read.delim(file, sep = "\t", header = F)
-  sf_obj <- st_as_sf(df, coords = c("V6", "V5"), crs = 4326)
-  sf_obj <- sf_obj[,c(3,6)]
+  df <- read.delim(file, sep = "\t", header = T)
+  sf_obj <- st_as_sf(df, coords = c("long_dd", "lat_dd"), crs = 4326)
+  sf_obj <- sf_obj[,c("full_nm_nd","desig_cd")]
   colnames(sf_obj)[c(1,2)] <- c("toponym", "geofeature")
   sf_obj$toponym <- tolower(sf_obj$toponym)
   return(sf_obj)
@@ -203,7 +203,5 @@ glottoconstraint_proximity <- function(topomatch = NULL, nn = NULL){
   cat(" \n \n \n \n Identified", sum(topomatch_nnsel$topomatch), "topomatches. \n \n \n \n") 
   return(topomatch_nnsel)
 }
-
-
 
 
